@@ -1,0 +1,11 @@
+{
+    "rules": {
+        "no-unused-vars": "error",
+        "no-plusplus": "off"
+    },
+    "categories": {
+        "correctness": "error",
+        "perf": "warn",
+        "style": "warn"
+    }
+}
