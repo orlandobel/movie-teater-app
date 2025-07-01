@@ -1,5 +1,5 @@
 import { IoMdSearch } from "react-icons/io";
-import { IconButton } from "../buttons/Iconbutton";
+import { IconButton } from "@components/buttons/iconbutton";
 
 export const Searchbar = () => {
     return (
