@@ -1,12 +1,12 @@
 import '@/App.css'
-import { Mainpage } from './layouts/mainpage'
+import { HomePage } from './pages/HomePage'
 
 function App() {
-  return (
-    <>
-      <Mainpage />
-    </>
-  )
+    return (
+        <>
+            <HomePage />
+        </>
+    )
 }
 
 export default App

@@ -1,6 +1,6 @@
-import { Searchbar } from "../components/search/Searchbar";
+import { Searchbar } from "../components/search/Searchbar"
 
-export const Mainpage = () => {
+export const Mainlayout = ({ children }) => {
     return (
         <>
         <header className="flex justify-between bg-slate-500 h-18 w-full">
@@ -8,8 +8,8 @@ export const Mainpage = () => {
                 <Searchbar />
             </nav>
         </header>
-        <main>
-            <h1>test main</h1>
+        <main className="grid grid-cols-4 gap-6 px-[18svw] py-8">
+            {children}
         </main>
         </>
     )
