@@ -8,7 +8,7 @@ interface MainLayoutProps {
 export const Mainlayout = ({ children } : MainLayoutProps) => {
     return (
         <>
-        <header className="flex justify-between bg-slate-500 h-18 w-full">
+        <header className="flex justify-between bg-blue-800 h-18 w-full">
             <nav className="w-full px-4 flex flex-row-reverse items-center">
                 <Searchbar />
             </nav>
