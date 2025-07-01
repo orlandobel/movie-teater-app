@@ -1,6 +1,11 @@
-import { Searchbar } from "../components/search/Searchbar"
+import type { JSX } from "react/jsx-runtime"
+import { Searchbar } from "@components/search/searchbar"
 
-export const Mainlayout = ({ children }) => {
+interface MainLayoutProps {
+    children: string | JSX.Element | JSX.Element[] 
+}
+
+export const Mainlayout = ({ children } : MainLayoutProps) => {
     return (
         <>
         <header className="flex justify-between bg-slate-500 h-18 w-full">
