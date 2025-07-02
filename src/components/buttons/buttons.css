@@ -1,0 +1,9 @@
+@reference '@/index.css';
+
+.btn {
+    @apply px-4 py-2 rounded-full bg-blue-800 text-white;
+}
+
+.btn--icon {
+    @apply text-gray-500;
+}

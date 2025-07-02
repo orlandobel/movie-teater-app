@@ -1,4 +1,5 @@
 import { type IconType } from "react-icons";
+import "./buttons.css"
 
 interface IconButtonProps {
     Icon: IconType;
@@ -6,7 +7,7 @@ interface IconButtonProps {
 
 export const IconButton = ({ Icon }: IconButtonProps) => {
     return (
-        <button>
+        <button className="btn--icon">
             <Icon />
         </button>
     )

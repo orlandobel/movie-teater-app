@@ -1,0 +1,14 @@
+@reference '@/index.css';
+
+.searchbar {
+    @apply flex bg-white rounded-full h-8 justify-center items-center px-3;
+}
+
+.searchbar:has(input:focus) {
+    border: 2px solid black;
+}
+
+.searchbar__input:focus {
+    border: none;
+    outline: none;
+}
