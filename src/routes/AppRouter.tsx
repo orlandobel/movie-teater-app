@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router"
-import { HomePage } from "@/pages/HomePage"
-import { MoovieDetails } from "@/pages/MoovieDetails"
+import { HomePage } from "@/pages/HomePage/HomePage"
+import { MoovieDetails } from "@/pages/MovieDetails/MovieDetails"
 
 export const AppRouter = () => {
     return (

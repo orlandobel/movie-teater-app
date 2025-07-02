@@ -4,7 +4,7 @@
     @apply flex bg-white rounded-full h-8 justify-center items-center px-3;
 }
 
-.searchbar:has(input:focus) {
+.searchbar--focus:has(input:focus) {
     border: 2px solid black;
 }
 

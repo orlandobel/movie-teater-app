@@ -1,5 +1,6 @@
 import type { JSX } from "react/jsx-runtime"
 import { Searchbar } from "@components/search/searchbar"
+import "./mainlayout.css"
 
 interface MainLayoutProps {
     children: string | JSX.Element | JSX.Element[] 
@@ -9,8 +10,8 @@ interface MainLayoutProps {
 export const Mainlayout = ({ children, className } : MainLayoutProps) => {
     return (
         <>
-        <header className="flex justify-between bg-blue-800 h-18 w-full">
-            <nav className="w-full px-4 flex flex-row-reverse items-center">
+        <header className="header">
+            <nav className="header__nav">
                 <Searchbar />
             </nav>
         </header>

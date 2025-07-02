@@ -1,9 +1,10 @@
 import { Mainlayout } from "@/layouts/mainlayout"
-import { MovieCard } from "@/components/moviecard/mooviecard"
+import { MovieCard } from "@/components/moviecard/moviecard"
+import "./HomePage.css"
 
 export const HomePage = () => {
     return <>
-        <Mainlayout className="grid grid-cols-4 gap-6 px-[18svw] py-8">
+        <Mainlayout className="HomePage">
             <MovieCard />
             <MovieCard />
             <MovieCard />

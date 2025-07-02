@@ -1,0 +1,9 @@
+@reference '@/index.css';
+
+.link {
+    @apply text-sky-400 font-bold;
+}
+
+.link--hover:hover {
+    @apply text-blue-700 underline;
+}

@@ -1,0 +1,20 @@
+@reference '@/index.css';
+
+.header {
+    @apply h-18 bg-blue-800;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+    
+.header__nav {
+    @apply px-4;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+
+    align-items: center;
+}
+    

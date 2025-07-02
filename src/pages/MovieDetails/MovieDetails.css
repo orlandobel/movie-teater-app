@@ -1,0 +1,48 @@
+@reference '@/index.css';
+
+.MovieDetails {
+   @apply flex gap-12 py-8 px-[18svw];
+}
+
+.MovieDetails__poster {
+    @apply rounded-[1rem] 
+        h-[60svh] 
+        aspect-[1.85/2.35] 
+        bg-gray-300;
+}
+
+.MovieDetails__poster img {
+    aspect-ratio: 1.85/2.35;
+    object-fit: contain;
+}
+
+.MovieDetails__info {
+    @apply flex 
+        flex-col 
+        gap-4 
+        justify-between 
+        py-32;
+}
+
+.MovieDetails__info__MovieInfo {
+    @apply flex 
+        flex-col 
+        gap-2 
+        items-center;
+}
+
+.MovieDetails__info__MovieInfo > div {
+    @apply flex gap-2;
+}
+
+.MovieDetails__info__FunctionInfo {
+    @apply flex 
+        flex-col 
+        gap-6 
+        text-center;
+}
+
+.MovieDetails__info__FunctionInfo > div {
+    @apply flex gap-6 ;
+}
+    
