@@ -1,4 +1,5 @@
 import noPoster from "@assets/img/no-poster.png"
+import { Link } from "react-router"
 
 export const MovieCard = () => {
     return (
@@ -12,7 +13,7 @@ export const MovieCard = () => {
                     <small>120min</small>
                     <small>A</small>
                 </label>
-                <a className="underline text-cyan-200">Comprar boletos →</a>
+                <Link className="underline text-cyan-200" to="/movie/1/foo">Comprar boletos →</Link>
             </div>
         </div>
     )

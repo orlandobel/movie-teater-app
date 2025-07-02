@@ -3,9 +3,10 @@ import { Searchbar } from "@components/search/searchbar"
 
 interface MainLayoutProps {
     children: string | JSX.Element | JSX.Element[] 
+    className?: string
 }
 
-export const Mainlayout = ({ children } : MainLayoutProps) => {
+export const Mainlayout = ({ children, className } : MainLayoutProps) => {
     return (
         <>
         <header className="flex justify-between bg-blue-800 h-18 w-full">
@@ -13,7 +14,7 @@ export const Mainlayout = ({ children } : MainLayoutProps) => {
                 <Searchbar />
             </nav>
         </header>
-        <main className="grid grid-cols-4 gap-6 px-[18svw] py-8">
+        <main className={className}>
             {children}
         </main>
         </>
