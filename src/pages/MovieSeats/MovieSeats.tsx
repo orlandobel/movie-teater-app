@@ -1,3 +1,4 @@
+import { SeatsRow } from "@/components/seats/SeatsRow"
 import "./MovieSeats.css"
 
 export const MovieSeats = () => {
@@ -9,237 +10,21 @@ export const MovieSeats = () => {
 
                 <div></div>
 
-                <div className="MovieSeats__row">
-                    <span>A</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span className="MovieSeats__row__seat">1</span>
-                    <span className="MovieSeats__row__seat">2</span>
-                    <span className="MovieSeats__row__seat">3</span>
-                    <span className="MovieSeats__row__seat">4</span>
-                    <span className="MovieSeats__row__seat">5</span>
-                    <span className="MovieSeats__row__seat">6</span>
-                    <span className="MovieSeats__row__seat">7</span>
-                    <span className="MovieSeats__row__seat">8</span>
-                    <span className="MovieSeats__row__seat">9</span>
-                    <span className="MovieSeats__row__seat">10</span>
-                    <span className="MovieSeats__row__seat">11</span>
-                    <span className="MovieSeats__row__seat">12</span>
-                    <span className="MovieSeats__row__seat">13</span>
-                    <span className="MovieSeats__row__seat">14</span>
-                    <span className="MovieSeats__row__seat">15</span>
-                    <span className="MovieSeats__row__seat">16</span>
-                    <span className="MovieSeats__row__seat">17</span>
-                    <span className="MovieSeats__row__seat">18</span>
-                    <span className="MovieSeats__row__seat">19</span>
-                    <span className="MovieSeats__row__seat">20</span>
-                </div>
-
-                <div className="MovieSeats__row">
-                    <span>B</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span className="MovieSeats__row__seat">1</span>
-                    <span className="MovieSeats__row__seat">2</span>
-                    <span className="MovieSeats__row__seat">3</span>
-                    <span className="MovieSeats__row__seat">4</span>
-                    <span className="MovieSeats__row__seat">5</span>
-                    <span className="MovieSeats__row__seat">6</span>
-                    <span className="MovieSeats__row__seat">7</span>
-                    <span className="MovieSeats__row__seat">8</span>
-                    <span className="MovieSeats__row__seat">9</span>
-                    <span className="MovieSeats__row__seat">10</span>
-                    <span className="MovieSeats__row__seat">11</span>
-                    <span className="MovieSeats__row__seat">12</span>
-                    <span className="MovieSeats__row__seat">13</span>
-                    <span className="MovieSeats__row__seat">14</span>
-                    <span className="MovieSeats__row__seat">15</span>
-                    <span className="MovieSeats__row__seat">16</span>
-                    <span className="MovieSeats__row__seat">17</span>
-                    <span className="MovieSeats__row__seat">18</span>
-                    <span className="MovieSeats__row__seat">19</span>
-                    <span className="MovieSeats__row__seat">20</span>
-                </div>
-
-                <div className="MovieSeats__row">
-                    <span>C</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span className="MovieSeats__row__seat">1</span>
-                    <span className="MovieSeats__row__seat">2</span>
-                    <span className="MovieSeats__row__seat">3</span>
-                    <span className="MovieSeats__row__seat">4</span>
-                    <span className="MovieSeats__row__seat">5</span>
-                    <span className="MovieSeats__row__seat">6</span>
-                    <span className="MovieSeats__row__seat">7</span>
-                    <span className="MovieSeats__row__seat">8</span>
-                    <span className="MovieSeats__row__seat">9</span>
-                    <span className="MovieSeats__row__seat">10</span>
-                    <span className="MovieSeats__row__seat">11</span>
-                    <span className="MovieSeats__row__seat">12</span>
-                    <span className="MovieSeats__row__seat">13</span>
-                    <span className="MovieSeats__row__seat">14</span>
-                    <span className="MovieSeats__row__seat">15</span>
-                    <span className="MovieSeats__row__seat">16</span>
-                    <span className="MovieSeats__row__seat">17</span>
-                    <span className="MovieSeats__row__seat">18</span>
-                    <span className="MovieSeats__row__seat">19</span>
-                    <span className="MovieSeats__row__seat">20</span>
-                </div>
-
-                <div className="MovieSeats__row">
-                    <span>D</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span className="MovieSeats__row__seat">1</span>
-                    <span className="MovieSeats__row__seat">2</span>
-                    <span className="MovieSeats__row__seat">3</span>
-                    <span className="MovieSeats__row__seat">4</span>
-                    <span className="MovieSeats__row__seat">5</span>
-                    <span className="MovieSeats__row__seat">6</span>
-                    <span className="MovieSeats__row__seat">7</span>
-                    <span className="MovieSeats__row__seat">8</span>
-                    <span className="MovieSeats__row__seat">9</span>
-                    <span className="MovieSeats__row__seat">10</span>
-                    <span className="MovieSeats__row__seat">11</span>
-                    <span className="MovieSeats__row__seat">12</span>
-                    <span className="MovieSeats__row__seat">13</span>
-                    <span className="MovieSeats__row__seat">14</span>
-                    <span className="MovieSeats__row__seat">15</span>
-                    <span className="MovieSeats__row__seat">16</span>
-                    <span className="MovieSeats__row__seat">17</span>
-                    <span className="MovieSeats__row__seat">18</span>
-                    <span className="MovieSeats__row__seat">19</span>
-                    <span className="MovieSeats__row__seat">20</span>
-                </div>
-
-                <div className="MovieSeats__row">
-                    <span>E</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span className="MovieSeats__row__seat">1</span>
-                    <span className="MovieSeats__row__seat">2</span>
-                    <span className="MovieSeats__row__seat">3</span>
-                    <span className="MovieSeats__row__seat">4</span>
-                    <span className="MovieSeats__row__seat">5</span>
-                    <span className="MovieSeats__row__seat">6</span>
-                    <span className="MovieSeats__row__seat">7</span>
-                    <span className="MovieSeats__row__seat">8</span>
-                    <span className="MovieSeats__row__seat">9</span>
-                    <span className="MovieSeats__row__seat">10</span>
-                    <span className="MovieSeats__row__seat">11</span>
-                    <span className="MovieSeats__row__seat">12</span>
-                    <span className="MovieSeats__row__seat">13</span>
-                    <span className="MovieSeats__row__seat">14</span>
-                    <span className="MovieSeats__row__seat">15</span>
-                    <span className="MovieSeats__row__seat">16</span>
-                    <span className="MovieSeats__row__seat">17</span>
-                    <span className="MovieSeats__row__seat">18</span>
-                    <span className="MovieSeats__row__seat">19</span>
-                    <span className="MovieSeats__row__seat">20</span>
-                </div>
-
-                <div className="MovieSeats__row">
-                    <span>E</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span className="MovieSeats__row__seat">1</span>
-                    <span className="MovieSeats__row__seat">2</span>
-                    <span className="MovieSeats__row__seat">3</span>
-                    <span className="MovieSeats__row__seat">4</span>
-                    <span className="MovieSeats__row__seat">5</span>
-                    <span className="MovieSeats__row__seat">6</span>
-                    <span className="MovieSeats__row__seat">7</span>
-                    <span className="MovieSeats__row__seat">8</span>
-                    <span className="MovieSeats__row__seat">9</span>
-                    <span className="MovieSeats__row__seat">10</span>
-                    <span className="MovieSeats__row__seat">11</span>
-                    <span className="MovieSeats__row__seat">12</span>
-                    <span className="MovieSeats__row__seat">13</span>
-                    <span className="MovieSeats__row__seat">14</span>
-                    <span className="MovieSeats__row__seat">15</span>
-                    <span className="MovieSeats__row__seat">16</span>
-                    <span className="MovieSeats__row__seat">17</span>
-                    <span className="MovieSeats__row__seat">18</span>
-                    <span className="MovieSeats__row__seat">19</span>
-                    <span className="MovieSeats__row__seat">20</span>
-                </div>
-
-                <div className="MovieSeats__row">
-                    <span>F</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span className="MovieSeats__row__seat">1</span>
-                    <span className="MovieSeats__row__seat">2</span>
-                    <span className="MovieSeats__row__seat">3</span>
-                    <span className="MovieSeats__row__seat">4</span>
-                    <span className="MovieSeats__row__seat">5</span>
-                    <span className="MovieSeats__row__seat">6</span>
-                    <span className="MovieSeats__row__seat">7</span>
-                    <span className="MovieSeats__row__seat">8</span>
-                    <span className="MovieSeats__row__seat">9</span>
-                    <span className="MovieSeats__row__seat">10</span>
-                    <span className="MovieSeats__row__seat">11</span>
-                    <span className="MovieSeats__row__seat">12</span>
-                    <span className="MovieSeats__row__seat">13</span>
-                    <span className="MovieSeats__row__seat">14</span>
-                    <span className="MovieSeats__row__seat">15</span>
-                    <span className="MovieSeats__row__seat">16</span>
-                    <span className="MovieSeats__row__seat">17</span>
-                    <span className="MovieSeats__row__seat">18</span>
-                    <span className="MovieSeats__row__seat">19</span>
-                    <span className="MovieSeats__row__seat">20</span>
-                </div>
-
-                <div className="MovieSeats__row">
-                    <span>F</span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span className="MovieSeats__row__seat">1</span>
-                    <span className="MovieSeats__row__seat">2</span>
-                    <span className="MovieSeats__row__seat">3</span>
-                    <span className="MovieSeats__row__seat">4</span>
-                    <span className="MovieSeats__row__seat">5</span>
-                    <span className="MovieSeats__row__seat">6</span>
-                    <span className="MovieSeats__row__seat">7</span>
-                    <span className="MovieSeats__row__seat">8</span>
-                    <span className="MovieSeats__row__seat">9</span>
-                    <span className="MovieSeats__row__seat">10</span>
-                    <span className="MovieSeats__row__seat">11</span>
-                    <span className="MovieSeats__row__seat">12</span>
-                    <span className="MovieSeats__row__seat">13</span>
-                    <span className="MovieSeats__row__seat">14</span>
-                    <span className="MovieSeats__row__seat">15</span>
-                    <span className="MovieSeats__row__seat">16</span>
-                    <span className="MovieSeats__row__seat">17</span>
-                    <span className="MovieSeats__row__seat">18</span>
-                    <span className="MovieSeats__row__seat">19</span>
-                    <span className="MovieSeats__row__seat">20</span>
-                </div>
+                <SeatsRow rowLetter="A" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="B" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="C" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="D" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="E" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="F" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="G" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="H" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="I" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="J" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="K" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="L" emptySeats={4} seats={18} />
+                <SeatsRow rowLetter="M" emptySeats={0} seats={26} />
+                <SeatsRow rowLetter="N" emptySeats={0} seats={26} />
+                <SeatsRow rowLetter="O" emptySeats={0} seats={26} />
             </div>
         </section>
     )
