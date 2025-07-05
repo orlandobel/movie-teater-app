@@ -1,0 +1,6 @@
+@reference '@/index.css';
+
+.PurchaseSeatsLayout  {
+    @apply flex justify-center gap-6;
+}
+

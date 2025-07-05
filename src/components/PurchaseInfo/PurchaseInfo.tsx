@@ -4,16 +4,16 @@ import noPoster from "@assets/img/no-poster.png"
 export const PurchaseInfo = () => {
     return (<>
     <section className="PurchaseInfo">
-            <div className="PurchaseInfo__header">
+            <header className="PurchaseInfo__header">
                 <label>
                     Tu Carrito
                 </label>
                 <label>
                     $0.00
                 </label>
-            </div>
+            </header>
 
-            <div className="PurchaseInfo__movie">
+            <article className="PurchaseInfo__movie">
                 <div className="PurchaseInfo__movie__info">
                     <div className="PurchaseInfo__movie__info__poster">
                         <img src={noPoster} alt="" />
@@ -28,7 +28,7 @@ export const PurchaseInfo = () => {
                     <span>B</span>
                     <p>Some clasification description</p>
                 </div>
-            </div>
+            </article>
 
             <div className="PurchaseInfo__purchase">
                 <button className="btn btn--primary" type="button">Comprar xx boletos</button>
