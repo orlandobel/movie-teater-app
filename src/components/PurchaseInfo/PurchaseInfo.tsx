@@ -1,12 +1,15 @@
 import { Button } from "@components/buttons/Button"
 import noPoster from "@assets/img/no-poster.png"
-import "./PurchaseInfo.css"
 import { Card } from "@components/Card/Card"
 import { CardHeader } from "@components/Card/Header/CardHeader"
 import { CardBody } from "@/components/Card/Body/CardBody"
 import { CardFooter } from "@components/Card/Footer/CardFooter"
+import { useNavigate } from "react-router"
+import "./PurchaseInfo.css"
 
 export const PurchaseInfo = () => {
+    const navigate = useNavigate()
+    
     return (<Card>
             <CardHeader>
                 <label>
@@ -20,8 +23,7 @@ export const PurchaseInfo = () => {
             <CardBody className="PurchaseInfo__movie">
                 <figure className="PurchaseInfo__movie__info">
                     <img className="PurchaseInfo__movie__info__poster" src={noPoster} alt="" />
-                    {/*<div className="PurchaseInfo__movie__info__poster">
-                    </div>*/}
+                    
                     <figcaption className="PurchaseInfo__movie__info__info">
                         <h2 className="PurchaseInfo__movie__info__title">Some movie name</h2>
                         <div className="PurchaseInfo__movie__info__clasification">
@@ -38,7 +40,7 @@ export const PurchaseInfo = () => {
             </CardBody>
 
             <CardFooter className="PurchaseInfo__purchase">
-                <Button buttonType="primary">Comprar xx boletos</Button>
+                <Button buttonType="primary" onClick={() => navigate("/purchase-success")}>Comprar xx boletos</Button>
             </CardFooter>
        </Card>)
 }
