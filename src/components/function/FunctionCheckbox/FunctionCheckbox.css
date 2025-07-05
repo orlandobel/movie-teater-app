@@ -1,0 +1,11 @@
+@reference '@/index.css';
+
+.option__checkbox {
+    display: none !important;
+}
+
+.option__span--hover:hover,
+.option__checkbox--active:checked + span {
+    @apply text-blue-700 underline font-bold;
+}
+    

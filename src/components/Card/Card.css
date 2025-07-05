@@ -1,0 +1,13 @@
+@reference '@/index.css';
+
+.Card {
+    @apply flex 
+        flex-col 
+        bg-white
+        border 
+        border-gray-300 
+        rounded-2xl 
+        w-fit 
+        h-fit 
+        gap-6;
+}

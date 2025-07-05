@@ -1,0 +1,18 @@
+@reference '@/index.css';
+
+.SeatsLayout {
+    display: grid;
+    grid-template-rows: repeat(17, 1fr);
+    gap: 8px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.SeatsLayout__screen {
+    @apply bg-gray-300 rounded-full;
+    grid-column: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

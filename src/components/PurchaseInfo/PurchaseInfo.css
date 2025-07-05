@@ -1,0 +1,46 @@
+@reference '@/index.css';
+
+.PurchaseInfo__movie {
+    @apply flex flex-col gap-3;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.PurchaseInfo__movie__info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.PurchaseInfo__movie__info__poster {
+    @apply flex bg-gray-300;
+
+    height: 15svh;
+    aspect-ratio: 1.85/2.35;
+    
+    img {
+        aspect-ratio: 1.85/2.35;
+        object-fit: contain;
+    }
+}
+
+.PurchaseInfo__movie__info__info {
+    @apply flex flex-col justify-center gap-4;
+}
+
+.PurchaseInfo__movie__info__title,
+.PurchaseInfo__movie__info__clasification {
+    @apply flex items-center justify-center gap-2;
+}
+
+.PurchaseInfo__movie__info__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.PurchaseInfo__movie__clasification {
+    @apply flex gap-2;
+}
+
+.PurchaseInfo__purchase {
+    @apply flex justify-center;
+}

@@ -1,0 +1,21 @@
+@reference '@/index.css';
+
+.PurchaseSuccessLayout {
+    @apply flex
+        flex-col
+        items-center
+        justify-center
+        h-[calc(100vh-8rem)];
+}
+
+.PurchaseSuccessLayout__Card__Body {
+    @apply flex
+        flex-col
+        items-center
+        justify-center
+        gap-4;
+
+    h2 {
+        @apply text-2xl text-blue-800 font-bold ;
+    }
+}

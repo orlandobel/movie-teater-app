@@ -1,0 +1,5 @@
+@reference '@/index.css';
+
+.Card__Body {
+    @apply p-4
+}
