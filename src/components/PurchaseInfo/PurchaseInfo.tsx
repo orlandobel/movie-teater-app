@@ -1,5 +1,6 @@
-import "./PurchaseInfo.css"
+import { Button } from "@components/buttons/Button"
 import noPoster from "@assets/img/no-poster.png"
+import "./PurchaseInfo.css"
 
 export const PurchaseInfo = () => {
     return (<>
@@ -31,7 +32,7 @@ export const PurchaseInfo = () => {
             </article>
 
             <div className="PurchaseInfo__purchase">
-                <button className="btn btn--primary" type="button">Comprar xx boletos</button>
+                <Button buttonType="primary">Comprar xx boletos</Button>
             </div>
        </section>
     </>)

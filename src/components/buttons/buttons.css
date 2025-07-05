@@ -1,7 +1,23 @@
 @reference '@/index.css';
 
 .btn {
-    @apply px-4 py-2 rounded-full bg-blue-800 text-white;
+    @apply px-4 py-2 rounded-full;
+}
+
+.btn--primary {
+    @apply bg-blue-800 text-white;
+}
+
+.btn--secondary {
+    @apply bg-gray-300 text-black;
+}
+
+.btn--warning {
+    @apply bg-yellow-300 text-black;
+}
+
+.btn--danger {
+    @apply bg-red-600 text-white;
 }
 
 .btn--icon {
