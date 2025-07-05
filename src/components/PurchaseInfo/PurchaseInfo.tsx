@@ -1,20 +1,23 @@
 import { Button } from "@components/buttons/Button"
 import noPoster from "@assets/img/no-poster.png"
 import "./PurchaseInfo.css"
+import { Card } from "@components/Card/Card"
+import { CardHeader } from "@components/Card/Header/CardHeader"
+import { CardBody } from "@/components/Card/Body/CardBody"
+import { CardFooter } from "@components/Card/Footer/CardFooter"
 
 export const PurchaseInfo = () => {
-    return (<>
-    <section className="PurchaseInfo">
-            <header className="PurchaseInfo__header">
+    return (<Card>
+            <CardHeader>
                 <label>
                     Tu Carrito
                 </label>
                 <label>
                     $0.00
                 </label>
-            </header>
+            </CardHeader>
 
-            <article className="PurchaseInfo__movie">
+            <CardBody className="PurchaseInfo__movie">
                 <figure className="PurchaseInfo__movie__info">
                     <img className="PurchaseInfo__movie__info__poster" src={noPoster} alt="" />
                     {/*<div className="PurchaseInfo__movie__info__poster">
@@ -32,11 +35,10 @@ export const PurchaseInfo = () => {
                     <span>B</span>
                     <p>Some clasification description</p>
                 </div>
-            </article>
+            </CardBody>
 
-            <div className="PurchaseInfo__purchase">
+            <CardFooter className="PurchaseInfo__purchase">
                 <Button buttonType="primary">Comprar xx boletos</Button>
-            </div>
-       </section>
-    </>)
+            </CardFooter>
+       </Card>)
 }
