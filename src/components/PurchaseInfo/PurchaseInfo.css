@@ -25,33 +25,33 @@
 }
 
 .PurchaseInfo__movie {
-    @apply flex flex-col px-4;
+    @apply flex flex-col px-4 gap-3;
 }
 
 .PurchaseInfo__movie__info {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(2, 1fr);
 }
 
 .PurchaseInfo__movie__info__poster {
-    @apply flex row-span-2 bg-gray-300 col-start-1 row-start-1;
+    @apply flex bg-gray-300;
 
     height: 15svh;
     aspect-ratio: 1.85/2.35;
-
+    
     img {
         aspect-ratio: 1.85/2.35;
         object-fit: contain;
     }
 }
 
+.PurchaseInfo__movie__info__info {
+    @apply flex flex-col justify-center gap-4;
+}
 
 .PurchaseInfo__movie__info__title,
 .PurchaseInfo__movie__info__clasification {
     @apply flex items-center justify-center gap-2;
-    
-    
 }
 
 .PurchaseInfo__movie__info__title {

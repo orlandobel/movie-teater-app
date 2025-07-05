@@ -15,16 +15,19 @@ export const PurchaseInfo = () => {
             </header>
 
             <article className="PurchaseInfo__movie">
-                <div className="PurchaseInfo__movie__info">
-                    <div className="PurchaseInfo__movie__info__poster">
-                        <img src={noPoster} alt="" />
-                    </div>
-                    <h2 className="PurchaseInfo__movie__info__title">Some movie name</h2>
-                    <div className="PurchaseInfo__movie__info__clasification">
-                        <small>Clasificación B</small>
-                        <small>Duración: <b>120min</b></small>
-                    </div>
-                </div>
+                <figure className="PurchaseInfo__movie__info">
+                    <img className="PurchaseInfo__movie__info__poster" src={noPoster} alt="" />
+                    {/*<div className="PurchaseInfo__movie__info__poster">
+                    </div>*/}
+                    <figcaption className="PurchaseInfo__movie__info__info">
+                        <h2 className="PurchaseInfo__movie__info__title">Some movie name</h2>
+                        <div className="PurchaseInfo__movie__info__clasification">
+                            <small>Clasificación B</small>
+                            <small>Duración: <b>120min</b></small>
+                        </div>
+                    </figcaption>
+                </figure>
+                
                 <div className="PurchaseInfo__movie__clasification">
                     <span>B</span>
                     <p>Some clasification description</p>
