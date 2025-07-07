@@ -1,4 +1,4 @@
-import { SeatsRow } from "@/components/seats/SeatsRow"
+import { SeatsRow } from "@/components/seatsrows/SeatsRow"
 import "./SeatsLayout.css"
 
 interface SeatsLayoutProps {

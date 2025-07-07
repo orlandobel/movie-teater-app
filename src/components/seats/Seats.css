@@ -1,28 +1,14 @@
 @reference '@/index.css';
 
-.SeatsRow {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(27, 1fr);
-    gap: 8px;
-
-    justify-items: center;
-    align-items: center;
-    
-    span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        width: 35px;
-        aspect-ratio: 1;
-        /*height: 35px;*/
-    }
-}
-
 .SeatsRow__seat {
-    border: 1px solid gray;
-    border-radius: 6px;
+    @apply flex
+        items-center
+        justify-center
+        border 
+        border-gray-400 
+        rounded-[6px]
+        w-[25px]
+        aspect-[1];
 }
 
 .SeatsRow__seat:hover {
