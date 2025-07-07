@@ -1,20 +1,27 @@
+import { type RowType } from "@/stores/seatsstore"
+import { type SeatType } from "@/stores/seatsstore"
 import { Seat } from "@/components/seats/Seat"
 import "./SeatsRow.css"
 
 interface SeatsRowProps {
-    rowLetter: string
-    emptySeats: number
-    seats: number
+    index: number
+    row: RowType
+    onClickSeat: (row: number, seat: number) => void
 }
 
-export const SeatsRow = ({ rowLetter, emptySeats, seats }: SeatsRowProps) => {
-    const emptySeatsArray = Array.from({ length: emptySeats }, (_, i) => <span key={i}></span>)
-    const seatsArray = Array.from({ length: seats }, (_, i) => 
-        <Seat key={i} number={i + 1} />)
+export const SeatsRow = ({ index, row, onClickSeat }: SeatsRowProps) => {
+    const emptySeatsArray = Array.from({ length: row.emptySeats }, (_, i) => <span key={i}></span>)
+    const seatsArray = row.seats.map((seat: SeatType, i: number) => 
+        <Seat key={i} index={i} seat={seat} onClickSeat={handleOnClickSeat} />)
+
+
+    function handleOnClickSeat(seat: number) {
+        onClickSeat(index, seat)
+    }
     
     return (
         <div className="SeatsRow">
-            <span>{rowLetter}</span>
+            <span>{row.rowLetter}</span>
             {emptySeatsArray}
             {seatsArray}
         </div>

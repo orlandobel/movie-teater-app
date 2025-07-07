@@ -20,6 +20,11 @@
     @apply bg-blue-700 text-white;
 }
 
+.SeatsRow__seat--selected:hover {
+    @apply bg-white text-blue-700;
+    cursor: pointer;
+}
+
 .SeatsRow__seat--occupied {
     @apply bg-blue-700 text-transparent;
     cursor: not-allowed;

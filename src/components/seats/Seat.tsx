@@ -1,20 +1,16 @@
-import { useState } from "react"
+import { type SeatType } from "@/stores/seatsstore"
 import "./Seats.css"
 
 interface SeatProps {
-    number: number
+    index: number
+    seat: SeatType,
+    onClickSeat: (index: number) => void
 }
 
-export const Seat = ({ number }: SeatProps) => {
-    const [selected, setSelected] = useState(false)
-
-    const className = `SeatsRow__seat ${selected ? "SeatsRow__seat--selected" : ""}`
-
-    const handleClick = () => {
-        setSelected(!selected)
-    }
+export const Seat = ({ index, seat, onClickSeat }: SeatProps) => {
+    const className = `SeatsRow__seat ${seat.selected ? "SeatsRow__seat--selected" : ""} ${seat.occupied ? "SeatsRow__seat--occupied" : ""}`
 
     return (
-        <span className={className} onClick={handleClick}>{number}</span>
+        <span className={className} onClick={() => onClickSeat(index)}>{seat.number}</span>
     )
 }
