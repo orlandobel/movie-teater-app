@@ -8,6 +8,8 @@ interface MovieCardProps {
 }
 
 export const MovieCard = ({ movie }: MovieCardProps) => {
+    const path = `/movie/${movie.id}/${movie.title}`
+    
     return (
         <figure className="moviecard">
             <img className="moviecard__poster" src={movie.poster} alt={movie.title} />
@@ -18,7 +20,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
                     <small>{movie.duration}m</small>
                     <small>{movie.classification}</small>
                 </label>
-                <Link className="moviecard__footer__buy" to="/movie/1/foo">Comprar boletos →</Link>
+                <Link className="moviecard__footer__buy" to={path}>Comprar boletos →</Link>
             </figcaption>
         </figure>
     )

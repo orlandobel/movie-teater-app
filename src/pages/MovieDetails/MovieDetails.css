@@ -7,13 +7,14 @@
 .MovieDetails__poster {
     @apply rounded-[1rem] 
         h-[60svh] 
-        aspect-[1.85/2.35] 
+        aspect-[360/511] 
         bg-gray-300;
-}
 
-.MovieDetails__poster img {
-    aspect-ratio: 1.85/2.35;
-    object-fit: contain;
+    img {
+        @apply rounded-[1rem]
+            aspect-[360/511] 
+            object-contain;
+    }
 }
 
 .MovieDetails__info {
@@ -29,6 +30,10 @@
         flex-col 
         gap-2 
         items-center;
+
+    h1 {
+        @apply text-2xl font-bold;
+    }
 }
 
 .MovieDetails__info__MovieInfo > div {
