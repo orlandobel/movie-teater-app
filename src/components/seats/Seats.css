@@ -17,11 +17,11 @@
 }
 
 .SeatsRow__seat--selected {
-    @apply bg-blue-700 text-white;
+    @apply bg-blue-700 text-white font-bold;
 }
 
 .SeatsRow__seat--selected:hover {
-    @apply bg-white text-blue-700;
+    @apply text-white border-white;
     cursor: pointer;
 }
 
@@ -34,3 +34,7 @@
     background-position: center;
 }
 
+.SeatsRow__seat--occupied:hover {
+    @apply bg-blue-700 text-transparent border-none;
+    cursor: no-drop;
+}
