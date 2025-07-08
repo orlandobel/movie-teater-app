@@ -38,6 +38,10 @@ export const useSeatsStore = create<SeatsStore>((set) => ({
     setRows: (rows: RowType[]) => set({ rows }),
 }))
 
-function fakeSeats(number: number) {
-    return Array(number).fill(null).map((_, i) => ({ number: i + 1, selected: false, occupied: false }))
+function fakeSeats(number: number): SeatType[] {
+    return Array(number).fill(null).map((_, i) => ({ number: i + 1, selected: false, occupied: getRandomBoolean() }))
+}
+
+function getRandomBoolean(): boolean {
+    return Math.random() < 0.5;
 }
