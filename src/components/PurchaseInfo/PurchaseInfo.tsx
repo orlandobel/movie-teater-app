@@ -27,6 +27,14 @@ export const PurchaseInfo = ({ movie }: PurchaseInfoProps) => {
     useEffect(() => {
         setNumSeats(selectedSeats.length)
     }, [selectedSeats])
+
+    const onPurchaseClick = () => {
+        if (selectedSeats.length === 0) {
+            window.alert("Por favor, selecciona al menos un asiento")
+            return
+        }
+        navigate("/purchase-success")
+    }
     
     return (<Card className="PurchaseInfo">
             <CardHeader>
@@ -58,7 +66,7 @@ export const PurchaseInfo = ({ movie }: PurchaseInfoProps) => {
             </CardBody>
 
             <CardFooter className="PurchaseInfo__purchase">
-                <Button buttonType="primary" onClick={() => navigate("/purchase-success")}>Comprar {numSeats} boletos</Button>
+                <Button buttonType="primary" onClick={onPurchaseClick}>Comprar {numSeats} boletos</Button>
             </CardFooter>
        </Card>)
 }

@@ -1,13 +1,12 @@
-import { Link } from "react-router"
 import "./FunctionLink.css"
 
 interface FunctionLinkProps {
     label: string;
-    to: string;
+    onClick: () => void;
 }
 
-export const FunctionLink = ({ label, to }: FunctionLinkProps) => {
+export const FunctionLink = ({ label, onClick }: FunctionLinkProps) => {
     return (
-        <Link className="link link--hover" to={to}>{label}</Link>
+        <a className="link link--hover" onClick={onClick}>{label}</a>
     )
 }

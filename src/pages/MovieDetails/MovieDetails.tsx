@@ -3,7 +3,7 @@ import noPoster from "@assets/img/no-poster.png"
 import { FunctionCheckbox } from "@components/function/FunctionCheckbox/FunctionCheckbox"
 import { FunctionLink } from "@components/function/FunctionLink/FunctionLink"
 import { useMovieStore, type Movie, staticMovies } from "@/stores/moviesstore"
-import { useParams } from "react-router"
+import { useParams, useNavigate } from "react-router"
 import { useEffect, useState } from "react"
 import "./MovieDetails.css"
 
@@ -14,6 +14,7 @@ export const MoovieDetails = () => {
     const { id } = useParams()
     const { movies } = useMovieStore()
     const setMovies = useMovieStore((state) => state.setMovies)
+    const navigate = useNavigate()
 
     const seatsPath = `/movie/${id}/${movie?.title}/seats`
     
@@ -25,8 +26,17 @@ export const MoovieDetails = () => {
         setMovie(movies.find(movie => movie.id === Number(id)))
     }, [movies])
 
-    function onDayClick(day: string) {
+    const onDayClick = (day: string) => {
         setFunctionDay(day)
+    }
+
+    const onFunctionClick = () => {
+        if (!functionDay) {
+            window.alert("Por favor, selecciona un dia")
+            return
+        }
+
+        navigate(seatsPath)
     }
     
     return (<Mainlayout className="MovieDetails">
@@ -57,12 +67,12 @@ export const MoovieDetails = () => {
                 </div>   
 
                 <div>
-                    <FunctionLink label="13:45" to={seatsPath}/>
-                    <FunctionLink label="15:45" to={seatsPath}/>
-                    <FunctionLink label="17:45" to={seatsPath}/>
-                    <FunctionLink label="19:45" to={seatsPath}/>
-                    <FunctionLink label="21:45" to={seatsPath}/>
-                    <FunctionLink label="23:45" to={seatsPath}/>
+                    <FunctionLink label="13:45" onClick={onFunctionClick}/>
+                    <FunctionLink label="15:45" onClick={onFunctionClick}/>
+                    <FunctionLink label="17:45" onClick={onFunctionClick}/>
+                    <FunctionLink label="19:45" onClick={onFunctionClick}/>
+                    <FunctionLink label="21:45" onClick={onFunctionClick}/>
+                    <FunctionLink label="23:45" onClick={onFunctionClick}/>
                 </div>
             </div>
         </section>
