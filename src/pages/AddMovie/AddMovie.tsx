@@ -7,35 +7,35 @@ import { useMovieStore, type Movie } from '@/stores/moviesstore';
 import './AddMovie.css';
 
 const AddMovie = () => {
-  const [title, setTitle] = useState('');
-  const [duration, setDuration] = useState(0);
-  const [poster, setPoster] = useState('');
-  const [classification, setClassification] = useState('');
-  const { movies, setMovies } = useMovieStore()
-  
+	const [title, setTitle] = useState('');
+	const [duration, setDuration] = useState(0);
+	const [poster, setPoster] = useState('');
+	const [classification, setClassification] = useState('');
+	const { movies, setMovies } = useMovieStore()
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if(title === '' || duration === 0 ||  poster === '' || classification === '') {
-      alert('Por favor, completa todos los campos');
-      return;
-    }
-    
-    const newMovie: Movie = {
-      id: movies.length + 1,
-      title,
-      duration,
-      poster,
-      classification
-    };
 
-	setMovies([...movies, newMovie]);
-	setTitle('');
-	setDuration(0);
-	setPoster('');
-	setClassification('');
-	alert('Pelicula agregada correctamente');
-  };
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault();
+		if (title === '' || duration === 0 || poster === '' || classification === '') {
+			alert('Por favor, completa todos los campos');
+			return;
+		}
+
+		const newMovie: Movie = {
+			id: movies.length + 1,
+			title,
+			duration,
+			poster,
+			classification
+		};
+
+		setMovies([...movies, newMovie]);
+		setTitle('');
+		setDuration(0);
+		setPoster('');
+		setClassification('');
+		alert('Pelicula agregada correctamente');
+	};
 
   return (
 	<EmptyLayout>
