@@ -5,7 +5,9 @@ import { CardHeader } from "@components/Card/Header/CardHeader"
 import { CardBody } from "@/components/Card/Body/CardBody"
 import { CardFooter } from "@components/Card/Footer/CardFooter"
 import { useNavigate } from "react-router"
+import { useSeatsStore } from "@/stores/seatsstore"
 import type { Movie } from "@/stores/moviesstore"
+import { useEffect, useState } from "react"
 import "./PurchaseInfo.css"
 
 interface PurchaseInfoProps {
@@ -14,6 +16,17 @@ interface PurchaseInfoProps {
 
 export const PurchaseInfo = ({ movie }: PurchaseInfoProps) => {
     const navigate = useNavigate()
+    const { selectedSeats } = useSeatsStore()
+    const [ price, setPrice ] = useState(0)
+    const [ numSeats, setNumSeats ] = useState(0)
+    
+    useEffect(() => {
+        setPrice(selectedSeats.length * 50)
+    }, [selectedSeats])
+
+    useEffect(() => {
+        setNumSeats(selectedSeats.length)
+    }, [selectedSeats])
     
     return (<Card className="PurchaseInfo">
             <CardHeader>
@@ -21,7 +34,7 @@ export const PurchaseInfo = ({ movie }: PurchaseInfoProps) => {
                     Tu Carrito
                 </label>
                 <label>
-                    $0.00
+                    ${price}
                 </label>
             </CardHeader>
 
@@ -45,7 +58,7 @@ export const PurchaseInfo = ({ movie }: PurchaseInfoProps) => {
             </CardBody>
 
             <CardFooter className="PurchaseInfo__purchase">
-                <Button buttonType="primary" onClick={() => navigate("/purchase-success")}>Comprar xx boletos</Button>
+                <Button buttonType="primary" onClick={() => navigate("/purchase-success")}>Comprar {numSeats} boletos</Button>
             </CardFooter>
        </Card>)
 }

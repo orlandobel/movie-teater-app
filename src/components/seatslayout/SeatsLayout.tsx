@@ -8,13 +8,18 @@ interface SeatsLayoutProps {
 }
 
 export const SeatsLayout = ({ className }: SeatsLayoutProps) => {
-    const { rows } = useSeatsStore()
-    const { setRows } = useSeatsStore()
+    const { rows, setRows, selectedSeats, setSelectedSeats } = useSeatsStore()
 
     function onClickSeat(row: number, seat: number) {
         console.log(row, seat)
         rows[row].seats[seat].selected = !rows[row].seats[seat].selected
         setRows(rows)
+
+        if (rows[row].seats[seat].selected) {
+            setSelectedSeats([...selectedSeats, seat])
+        } else {
+            setSelectedSeats(selectedSeats.filter((s) => s !== seat))
+        }
     }
     
     return (
