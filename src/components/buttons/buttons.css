@@ -1,23 +1,39 @@
 @reference '@/index.css';
 
 .btn {
-    @apply px-4 py-2 rounded-full;
+    @apply px-4 py-2 rounded-md;
 }
 
 .btn--primary {
     @apply bg-blue-800 text-white;
 }
 
+.btn--primary:hover {
+    @apply bg-blue-700;
+}
+
 .btn--secondary {
     @apply bg-gray-300 text-black;
+}
+
+.btn--secondary:hover {
+    @apply bg-gray-200;
 }
 
 .btn--warning {
     @apply bg-yellow-300 text-black;
 }
 
+.btn--warning:hover {
+    @apply bg-yellow-200;
+}
+
 .btn--danger {
     @apply bg-red-600 text-white;
+}
+
+.btn--danger:hover {
+    @apply bg-red-700;
 }
 
 .btn--icon {
