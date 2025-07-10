@@ -19,10 +19,15 @@ interface MovieStoreActions {
 
 type MovieStore = MovieStoreState & MovieStoreActions 
 
-export const useMovieStore = create<MovieStore>(persist((set) => ({
-    movies: [],
-    setMovies: (movies: Movie[]) => set({ movies })
-}), { name: "movies-storage" }))
+export const useMovieStore = create<MovieStore>()(
+    persist(
+        (set) => ({
+            movies: [],
+            setMovies: (movies: Movie[]) => set({ movies })
+        }), 
+        { name: "movies-storage" }
+    )
+)
 
 export function staticMovies() {
     return [
