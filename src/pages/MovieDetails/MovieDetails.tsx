@@ -5,6 +5,7 @@ import { FunctionLink } from "@components/function/FunctionLink/FunctionLink"
 import { useMovieStore, type Movie, staticMovies } from "@/stores/moviesstore"
 import { useParams, useNavigate } from "react-router"
 import { useEffect, useState } from "react"
+import { weekStart, weekEnd, format } from "@formkit/tempo"
 import "./MovieDetails.css"
 
 export const MoovieDetails = () => {
@@ -54,16 +55,16 @@ export const MoovieDetails = () => {
             </div>
 
             <div className="MovieDetails__info__FunctionInfo">
-                <h2>Semana 01/07/2025 - 08/07/2025</h2>
+                <h2>Semana {getWeek()}</h2>
 
                 <div>
+                    <FunctionCheckbox onClick={() => onDayClick("Domingo")} name="functionDay" label="Domingo" />
                     <FunctionCheckbox onClick={() => onDayClick("Lunes")} name="functionDay" label="Lunes" />
                     <FunctionCheckbox onClick={() => onDayClick("Martes")} name="functionDay" label="Martes" />
                     <FunctionCheckbox onClick={() => onDayClick("Miercoles")} name="functionDay" label="Miercoles" />
                     <FunctionCheckbox onClick={() => onDayClick("Jueves")} name="functionDay" label="Jueves" />
                     <FunctionCheckbox onClick={() => onDayClick("Viernes")} name="functionDay" label="Viernes" />
                     <FunctionCheckbox onClick={() => onDayClick("Sabado")} name="functionDay" label="Sabado" />
-                    <FunctionCheckbox onClick={() => onDayClick("Domingo")} name="functionDay" label="Domingo" />
                 </div>   
 
                 <div>
@@ -77,4 +78,16 @@ export const MoovieDetails = () => {
             </div>
         </section>
     </Mainlayout>)
+}
+
+const getWeek = () => {
+    const today = new Date()
+
+    const wsRaw = weekStart(today)
+    const weRaw = weekEnd(today)
+
+    const ws = format(wsRaw, "short")
+    const we = format(weRaw, "short")
+
+    return `${ws} - ${we}`
 }
