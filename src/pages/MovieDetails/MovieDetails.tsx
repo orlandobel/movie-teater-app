@@ -20,6 +20,7 @@ export const MoovieDetails = () => {
     const seatsPath = `/movie/${id}/${movie?.title}/seats`
     
     useEffect(() => {
+        if (movies.length > 0) return
         setMovies(staticMovies())
     }, [])    
 

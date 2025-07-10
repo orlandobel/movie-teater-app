@@ -13,6 +13,7 @@ export const MovieSeats = () => {
     const setMovies = useMovieStore((state) => state.setMovies)
 
     useEffect(() => {
+        if (movies.length > 0) return
         setMovies(staticMovies())
     }, [])
 

@@ -1,4 +1,5 @@
 import { create } from "zustand"
+import { persist } from "zustand/middleware"
 
 export interface Movie {
     id: number
@@ -8,15 +9,20 @@ export interface Movie {
     classification: string
 }
 
-interface MovieStore {
+interface MovieStoreState {
     movies: Movie[],
-    setMovies: (movies: Movie[]) => void
 }
 
-export const useMovieStore = create<MovieStore>((set) => ({
+interface MovieStoreActions {
+    setMovies: (movies: Movie[]) => void,
+}
+
+type MovieStore = MovieStoreState & MovieStoreActions 
+
+export const useMovieStore = create<MovieStore>(persist((set) => ({
     movies: [],
     setMovies: (movies: Movie[]) => set({ movies })
-}))
+}), { name: "movies-storage" }))
 
 export function staticMovies() {
     return [
