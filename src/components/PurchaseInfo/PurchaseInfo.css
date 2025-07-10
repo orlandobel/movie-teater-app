@@ -1,5 +1,9 @@
 @reference '@/index.css';
 
+.PurchaseInfo {
+    @apply max-w-[18rem];
+}
+
 .PurchaseInfo__movie {
     @apply flex flex-col gap-3;
     padding-top: 0 !important;
@@ -9,16 +13,17 @@
 .PurchaseInfo__movie__info {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    gap: 1rem;
 }
 
 .PurchaseInfo__movie__info__poster {
     @apply flex bg-gray-300;
 
-    height: 15svh;
-    aspect-ratio: 1.85/2.35;
+    height: 16svh;
+    aspect-ratio: 360/511;
     
     img {
-        aspect-ratio: 1.85/2.35;
+        aspect-ratio: 360/511;
         object-fit: contain;
     }
 }

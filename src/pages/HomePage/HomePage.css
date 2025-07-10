@@ -1,5 +1,10 @@
 @reference '@/index.css';
 
 .HomePage {
-    @apply grid grid-cols-4 gap-6 px-[18svw] py-8;
+    @apply grid 
+        grid-cols-4 
+        items-stretch
+        gap-6 
+        px-[18svw] 
+        py-8;
 }

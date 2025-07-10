@@ -4,16 +4,15 @@
     @apply bg-gray-300 
         flex 
         flex-col 
-        rounded-[0.5rem];
+        rounded-[0.5rem]
+        h-full;
 }
 
 .moviecard__poster {
-    @apply h-[45svh] mx-4;
-}
-
-.moviecard__poster img {
-    aspect-ratio: 1.85/2.35;
-    object-fit: contain;
+    @apply w-full 
+        object-cover
+        rounded-t-[0.5rem]
+        flex-grow;
 }
 
 .moviecard__footer {

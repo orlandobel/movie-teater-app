@@ -1,0 +1,40 @@
+@reference '@/index.css';
+
+.SeatsRow__seat {
+    @apply flex
+        items-center
+        justify-center
+        border 
+        border-gray-400 
+        rounded-[6px]
+        w-[25px]
+        aspect-[1];
+}
+
+.SeatsRow__seat:hover {
+    @apply border-blue-700 text-blue-700;
+    cursor: pointer;
+}
+
+.SeatsRow__seat--selected {
+    @apply bg-blue-700 text-white font-bold;
+}
+
+.SeatsRow__seat--selected:hover {
+    @apply text-white border-white;
+    cursor: pointer;
+}
+
+.SeatsRow__seat--occupied {
+    @apply bg-blue-700 text-transparent;
+    cursor: not-allowed;
+
+    background-image: url("@assets/icons/occupied_seat_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.SeatsRow__seat--occupied:hover {
+    @apply bg-blue-700 text-transparent border-none;
+    cursor: no-drop;
+}

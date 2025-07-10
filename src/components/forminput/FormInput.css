@@ -1,0 +1,35 @@
+@reference '@/index.css';
+
+.FormGroup {
+    @apply flex
+        flex-col
+        gap-1
+        mb-[1rem];
+}
+  
+.FormInput__label {
+    @apply text-gray-700
+        font-bold
+        mb-[0.5rem];
+}
+  
+.FormInput__input,
+.FormInput__textarea {
+    @apply w-full
+        p-[0.75rem]
+        border
+        border-gray-300
+        rounded-[4px]
+        text-[1rem];
+}
+  
+.FormInput__input:focus,
+.FormInput__textarea:focus {
+    @apply border-blue-700
+        outline-none;
+}
+  
+.FormInput__textarea {
+    resize: vertical;
+    min-height: 100px;
+}

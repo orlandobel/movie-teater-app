@@ -1,21 +1,26 @@
-import noPoster from "@assets/img/no-poster.png"
 import { Link } from "react-router"
+import type { Movie } from "@/stores/moviesstore"
 import "./moviecard.css"
 
-export const MovieCard = () => {
+interface MovieCardProps {
+    movie: Movie
+}
+
+export const MovieCard = ({ movie }: MovieCardProps) => {
+    const path = `/movie/${movie.id}/${movie.title}`
+    
     return (
-        <div className="moviecard">
-            <div className="moviecard__poster">
-                <img src={noPoster} alt="" />
-            </div>
-            <div className="moviecard__footer">
+        <figure className="moviecard">
+            <img className="moviecard__poster" src={movie.poster} alt={movie.title} />
+            
+            <figcaption className="moviecard__footer">
                 <label className="moviecard__footer__info">
-                    <span>Some Large Movie Name</span>
-                    <small>120min</small>
-                    <small>A</small>
+                    <span>{movie.title}</span>
+                    <small>{movie.duration}m</small>
+                    <small>{movie.classification}</small>
                 </label>
-                <Link className="moviecard__footer__buy" to="/movie/1/foo">Comprar boletos →</Link>
-            </div>
-        </div>
+                <Link className="moviecard__footer__buy" to={path}>Comprar boletos →</Link>
+            </figcaption>
+        </figure>
     )
 }
