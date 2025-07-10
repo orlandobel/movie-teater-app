@@ -1,4 +1,3 @@
-import noPoster from "@assets/img/no-poster.png"
 import { Link } from "react-router"
 import type { Movie } from "@/stores/moviesstore"
 import "./moviecard.css"
