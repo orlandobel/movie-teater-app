@@ -24,7 +24,6 @@ export const SeatsLayout = ({ className }: SeatsLayoutProps) => {
     
     return (
         <section className={className}>
-            <div className="legend"></div>
             <div className="SeatsLayout">
                 <span className="SeatsLayout__screen">Pantalla</span>
 
