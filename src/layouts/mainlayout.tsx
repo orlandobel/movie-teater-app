@@ -9,6 +9,8 @@ interface MainLayoutProps {
 }
 
 export const Mainlayout = ({ children, className, onSearch } : MainLayoutProps) => {
+    console.log(import.meta.env.VITE_FOO)
+
     return (
         <>
         <header className="header">
